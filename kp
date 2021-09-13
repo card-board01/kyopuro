@@ -1,0 +1,34 @@
+#!/bin/bash
+# ==============================================
+
+function show_usage() {
+	echo "Usage: kp [filename] [-h]" 1>&2
+	exit 1
+}
+
+
+if [ "$1" = "" ]; then
+	echo "No input files."
+	show_usage
+fi
+
+
+
+while getopts :h OPT
+do
+	case $OPT in
+		h ) FLG_H="TRUE" ;;
+		* ) show_usage
+			  ;;
+	esac
+done
+
+if [ "$FLG_H" = "TRUE" ]; then
+	show_usage
+fi
+
+
+
+
+echo "g++ -g $1 -o a && ./a"
+g++ -g $1 -o a && ./a
