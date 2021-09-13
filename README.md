@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # kyopuro
 
 ## kp
@@ -40,6 +39,3 @@ kp a.cpp
 ### 更新履歴とか
 
 - [2021/09/13] README 作成
-=======
-# kyopuro
->>>>>>> origin/main
